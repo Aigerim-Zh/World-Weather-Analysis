@@ -120,7 +120,13 @@ Google heatmaps do not plot negative numbers. Since the generated weather data h
 
 9. **A Travel Itinerary Map** was created to show an example route between four cities chosen from the customer's chosen travel destinations.  
 
-The example destinations are:
+The example destinations are in Mexico:
+
+- Vacation Start: Coahuayana
+- Vacation End: Coahuayana
+- Vacation Stop1: Acapulco
+- Vacation Stop2: Puerto Escondido
+- Vacation Stop3: Huatulco
 
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Vacation_Itinerary/Maps/Example%20Route%20copy.png)
 
