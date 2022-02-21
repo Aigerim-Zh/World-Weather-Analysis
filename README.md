@@ -120,6 +120,8 @@ Google heatmaps do not plot negative numbers. Since the generated weather data h
 
 9. **A Travel Itinerary Map** was created to show an example route between four cities chosen from the customer's chosen travel destinations.  
 
+The example destinations are:
+
 ![]()
 
 ![]()
