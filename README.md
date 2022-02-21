@@ -122,7 +122,7 @@ Google heatmaps do not plot negative numbers. Since the generated weather data h
 
 The example destinations are:
 
-![]()
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Vacation_Itinerary/Maps/Example%20Route%20copy.png)
 
-![]()
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Vacation_Itinerary/Maps/Map%20with%20Markers%20copy.png)
 
