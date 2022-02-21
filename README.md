@@ -21,16 +21,17 @@ When generating random latitudes and longitudes, it is important to ensure that 
 
 The format of coordinates must be floating-point decimals as angular units of degrees, minutes, and seconds can be represented as a decimal number. 
 
-2. Corresponding cities were found for these 2000 coordinates using the CitiPy module. However, only 729 unique cities were matched to 2000 coordinates as there were duplicated pairs in the generated coordinates. 
+2. Corresponding cities were found for these 2000 coordinates using the CitiPy module. However, only 757 unique cities were matched to 2000 coordinates as there were duplicated pairs in the generated coordinates. 
 3. A request was made on the OpenWeather API and retreieve the current weather data for eqach unique city in the list in the JSON format. 
-4. The weather data in real time for 729 unique cities around the world were collected from the JSON file and added to a Pandas DataFrame with the following:
+4. The weather data in real time was found for 686 cities out of 757 generated cities around the world were collected from the JSON file and added to a Pandas DataFrame with the following:
     - City, country, and date
     - Latitude and longitude
     - Maximum temperature
     - Humidity
     - Couldiness
     - Wind speed
-![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/weather_data/JSON%20into%20DataFrame_weather_data.png)
+    - Current Weather Description (e.g., clouds, fog, light rain, clear sky)
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Weather_Database_686%20cities.png)
 5. **Exloratory Analysis** was done using matplotlib to create the series of scatterplots to show the relationship and a variety of weather parameters. Using linear regression, we predict the best time of year to plan their vacation. 
 
 **City Latitude vs. Maximum Temperature**
@@ -85,20 +86,31 @@ The correlation between the city latitude and cloudiness is very low and slightl
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/weather_data/Latitude%20vs.%20Wind%20Speed_South.png)
 There association between the latitude and wind speed is almost non-existant with a close to zero slope. So, the wind cannot be predictable by changes in latitude. 
 
-6. **A heatmap** was created with pop-up markers that can display information on specific cities based on a customer's travel preferences. The following steps were completed:
-    - Filter the Pandas DataFrame based on user inputs for a minimum and maximum temperature. 
+7. **Heatmaps** were created for all 729 cities to display the density of each weather parameter. 
+
+**Maximum Temperature Heatmap**
+Google heatmaps do not plot negative numbers. Since the generated weather data has negative values for maximum temperaturesm, only positive ones were selected. Now the number of cities has decreased to 660 cities with only positive maximum temperatures. 
+
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/weather_data/Max%20Temp%20Heatmap.png)
+
+**Humidity Heatmap**
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/weather_data/Humidity%20Heatmap.png)
+
+**Cloudiness Heatmap**
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/weather_data/Cloudiness%20Heatmap.png)
+
+**Wind Speed Heatmap**
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/weather_data/Wind%20Speed%20Heatmap.png)
+
+
+8. **A Vacation Search map** was created with pop-up markers that can display information on specific cities based on a customer's travel preferences. The following steps were completed:
+    - Filter the Pandas DataFrame based on user inputs for a minimum and maximum temperature. The filtered dataset for a minimum temperature of 75 and maximum temperature of 90.
+![]()
     - Create a heatmap for the new DataFrame. 
     - Find nearby hotels from the cities's coordinates using Google's Maps and Places API, and Search Nearby feature. 
     - Store the name of the first hotel in the DataFrame. 
     - Add pop-up markers to the heatmap that display information about the city, current maximum temperature, and a hotel in the city.
 
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/weather_data/HeatMap%20fro%20Maximum%20Temperature.png)
 
-
-
-
-# Creating Heatmaps for the Weather Data
-
-## Maximum Temperature
-Google heatmaps do not plot negative numbers. Since the generated weather data has negative values for maximum temperatures. We need to select only positive ones. Now the number of cities has decreased to 660 cities with only positive maximum temperatures. 
-
-The filtered dataset for a minimum temperature of 75 and maximum temperature of 90.
+9. **A Travel Itenerary Map** was created to show the route between four cities chosen from the customer's possible travel destinations.  
