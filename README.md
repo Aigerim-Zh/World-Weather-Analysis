@@ -35,11 +35,13 @@ The format of coordinates must be floating-point decimals as angular units of de
 5. **Exloratory Analysis** was done using matplotlib to create the series of scatterplots to show the relationship and a variety of weather parameters. Using linear regression, we predict the best time of year to plan their vacation. 
 
 **City Latitude vs. Maximum Temperature**
+
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs%20Max%20Temp.png)
 
 The above scatter plot does not show a single linear pattern. However, we can notice linear patters if we divide the data in two parts - Northern and Southern hemispheres. And, in each part, the maximum temperatures tends to increase as the latitude is closer to the equator. The temperature tends to decrease as the latitude is farther from the equator. 
 
 **City Latitude vs. % of Humidity**
+
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Humidity.png)
 
 The scatter plot does not show any definitive pattern. However, we can see a very weak negative association in each hemisphere. 
@@ -59,6 +61,7 @@ The scatter plot does not show any definitive pattern.
 6. **Regression Analysis on Northern and Southern Hemispheres** was done to confirm our preliminary findings above using the SciPy library.
 
 **City Latitude vs. Maximum Temperature**
+
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Max%20Temp_North.png)
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Max%20Temp_South.png)
 
@@ -68,6 +71,7 @@ So, the latitude might be used to predict the maximum temperature. However, it i
 
 
 **City Latitude vs. % of Humidity**
+
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Humidity_North.png)
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Humidity_South.png)
 
@@ -95,20 +99,28 @@ Google heatmaps do not plot negative numbers. Since the generated weather data h
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Heatmaps/Max%20Temp%20Heatmap.png)
 
 **Humidity Heatmap**
+
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Heatmaps/Humidity%20Heatmap.png)
 
 **Cloudiness Heatmap**
+
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Heatmaps/Cloudiness%20Heatmap.png)
 
 **Wind Speed Heatmap**
+
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Heatmaps/Wind%20Speed%20Heatmap.png)
 
 
 8. **A Vacation Search Map** was created with pop-up markers that can display information on specific cities based on a customer's travel preferences. The following steps were completed:
     - The Pandas DataFrame was filtered based on user inputs for a minimum and maximum temperature. As an example, a minimum temperature of 75 and maximum temperature of 90 were inputted, which returned 198 cities. 
     - Next, the nearby hotels were found from the cities's coordinates using Google's Maps and Places API, and Search Nearby feature. The name of the first hotel (default is rank by prominence) for each city was stored. 
-    - The heatmap with pop-up markers was created that can display information about the city, current maximum temperature, and a hotel in the city.
+    - The heatmap with pop-up markers was created that can display information about the city, the most popular hotel, current maximum temperature, and current weather description. 
 
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Vacation_Search/Vacation_Search_Map.png)
 
-9. **A Travel Itenerary Map** was created to show the route between four cities chosen from the customer's possible travel destinations.  
+9. **A Travel Itinerary Map** was created to show an example route between four cities chosen from the customer's chosen travel destinations.  
+
+![]()
+
+![]()
+
