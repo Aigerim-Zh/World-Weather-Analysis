@@ -80,6 +80,7 @@ So, the latitude might be used to predict the maximum temperature. However, it i
 There is a weak association between the city latitude and humidity in each hemisphere. So, the humidity might not be well-predictable by the change in the latitude. 
 
 **City Latitude vs. Cloudiness**
+
 <img src="https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_Cloudiness_North.png" width="420" height="340">
 
 <img src="https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_Cloudiness_South.png" width="420" height="340">
@@ -87,6 +88,7 @@ There is a weak association between the city latitude and humidity in each hemis
 The correlation between the city latitude and cloudiness is very low and slightly positive. So, the cloudiness might not be well-predictable by the change in the latitude. 
 
 **City Latitude vs. Wind Speed**
+
 <img src="https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_WindSpeed_North.png" width="420" height="340">
 
 <img src="https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_WindSpeed_South.png" width="420" height="340">
