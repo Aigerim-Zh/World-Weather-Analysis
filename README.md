@@ -64,7 +64,7 @@ The scatter plot does not show any definitive pattern.
 
 ![]()
 
-<img src="https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_MaxTemp_North.png" width="410" height="350">
+<img src="https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_MaxTemp_North.png" width="420" height="340">
 
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_MaxTemp_South.png)
 
