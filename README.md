@@ -4,41 +4,41 @@
 
 ## Background
 
-PlanMyTrip is a top travel technology company that specializes in the internet-related services in the hotel and lodging industries. 
+PlanMyTrip is a top travel technology company that specializes in internet-related services in the hotel and lodging industries. 
 
 ## Purpose 
-The purpose of this project is to collect and analyze weather data for more than 500 cities around the world. Furthemore, we are tasked with helping PlanMyTrip with presenting the weather data for customers via the search page, which they can filter based on their preferred travel criteria to find their "ideal" hotel anywhere in the world. The "ideal" hotel is narrowed down to:
-1) within a given range of latitude and longitute, and 
+The purpose of this project is to collect and analyze weather data for more than 500 cities around the world. Furthermore, we are tasked with helping PlanMyTrip with presenting the weather data for customers via the search page, which they can filter based on their preferred travel criteria to find their "ideal" hotel anywhere in the world. The "ideal" hotel is narrowed down to:
+1) within a given range of latitude and longitude, and 
 2) that provided the right kind of weather for the client. 
 
-The algorithm developed in this project can be reuded to get many more cities. 
+The algorithm developed in this project can be reused to get many more cities. 
 
 # Methodology and Analysis
 
 1. Setting the limit on data collection. 2000 random combinations of latitudes and longitudes were generated using the NumPy module. 
 
-When generating random latitudes and longitudes, it is important to ensure that coordinates are fairly distributed around the world. The algoritm will pull random latitudes and longitudes between the low and high values of coordinates. 
+When generating random latitudes and longitudes, it is important to ensure that coordinates are fairly distributed around the world. The algorithm will pull random latitudes and longitudes between the low and high values of coordinates. 
 
 The format of coordinates must be floating-point decimals as angular units of degrees, minutes, and seconds can be represented as a decimal number. 
 
 2. Corresponding cities were found for these 2000 coordinates using the CitiPy module. However, only 757 unique cities were matched to 2000 coordinates as there were duplicated pairs in the generated coordinates. 
-3. A request was made on the OpenWeather API and retreieve the current weather data for eqach unique city in the list in the JSON format. 
-4. The weather data in real time was found for 686 cities out of 757 generated cities around the world were collected from the JSON file and added to a Pandas DataFrame with the following:
+3. A request was made on the OpenWeather API and retrieve the current weather data for each unique city in the list in the JSON format. 
+4. The weather data in real-time was found for 686 cities out of 757 generated cities around the world were collected from the JSON file and added to a Pandas DataFrame with the following:
     - City, country, and date
     - Latitude and longitude
     - Maximum temperature
     - Humidity
-    - Couldiness
+    - Cloudiness
     - Wind speed
     - Current Weather Description (e.g., clouds, fog, light rain, clear sky)
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Weather_Database_686%20cities.png)
-5. **Exloratory Analysis** was done using matplotlib to create the series of scatterplots to show the relationship and a variety of weather parameters. Using linear regression, we predict the best time of year to plan their vacation. 
+5. **Exploratory Analysis** was done using matplotlib to create a series of scatterplots to show the relationship and a variety of weather parameters. Using linear regression, we predict the best time of year to plan their vacation. 
 
 **City Latitude vs. Maximum Temperature**
 
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs%20Max%20Temp.png)
 
-The above scatter plot does not show a single linear pattern. However, we can notice linear patters if we divide the data in two parts - Northern and Southern hemispheres. And, in each part, the maximum temperatures tends to increase as the latitude is closer to the equator. The temperature tends to decrease as the latitude is farther from the equator. 
+The above scatter plot does not show a single linear pattern. However, we can notice linear patterns if we divide the data into two parts - The northern and southern hemispheres. And, in each part, the maximum temperatures tend to increase as the latitude is closer to the equator. The temperature tends to decrease as the latitude is farther from the equator. 
 
 **City Latitude vs. % of Humidity**
 
@@ -66,9 +66,9 @@ The scatter plot does not show any definitive pattern.
 
 <img src="https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_MaxTemp_South.png" width="420" height="340">
 
-Now, we can see that, indeed, the regression confirms a strong negative association between the city latitude and maximum temperature in the Northen Hemishpere. In the Southern Hemispher, the relationship is weaker and positive. 
+Now, we can see that, indeed, the regression confirms a strong negative association between the city latitude and maximum temperature in the Northern Hemisphere. In the Southern Hemisphere, the relationship is weaker and positive. 
 
-So, the latitude might be used to predict the maximum temperature. However, it is important to note that to make any causual inferences, we need to investigate other factors affecting the maximum temperature. 
+So, the latitude might be used to predict the maximum temperature. However, it is important to note that to make any causal inferences, we need to investigate other factors affecting the maximum temperature. 
 
 
 **City Latitude vs. % of Humidity**
@@ -93,12 +93,12 @@ The correlation between the city latitude and cloudiness is very low and slightl
 
 <img src="https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_WindSpeed_South.png" width="420" height="340">
 
-There association between the latitude and wind speed is almost non-existant with a close to zero slope. So, the wind cannot be predictable by changes in latitude. 
+The association between the latitude and wind speed is almost non-existent with a close to the slope zero. So, the wind cannot be predictable by changes in latitude. 
 
 7. **Heatmaps** were created for all 729 cities to display the density of each weather parameter. 
 
 **Maximum Temperature Heatmap**
-Google heatmaps do not plot negative numbers. Since the generated weather data has negative values for maximum temperaturesm, only positive ones were selected. Now the number of cities has decreased to 660 cities with only positive maximum temperatures. 
+Google heatmaps do not plot negative numbers. Since the generated weather data has negative values for maximum temperatures, only positive ones were selected. Now the number of cities has decreased to 660 cities with only positive maximum temperatures. 
 
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Heatmaps/Max%20Temp%20Heatmap.png)
 
@@ -116,8 +116,8 @@ Google heatmaps do not plot negative numbers. Since the generated weather data h
 
 
 8. **A Vacation Search Map** was created with pop-up markers that can display information on specific cities based on a customer's travel preferences. The following steps were completed:
-    - The Pandas DataFrame was filtered based on user inputs for a minimum and maximum temperature. As an example, a minimum temperature of 75 and maximum temperature of 90 were inputted, which returned 198 cities. 
-    - Next, the nearby hotels were found from the cities's coordinates using Google's Maps and Places API, and Search Nearby feature. The name of the first hotel (default is rank by prominence) for each city was stored. 
+    - The Pandas DataFrame was filtered based on user inputs for a minimum and maximum temperature. As an example, the input for a minimum temperature of 75 and a maximum temperature of 90 returned 198 cities. 
+    - Next, the nearby hotels were found from the cities' coordinates using Google's Maps and Places API, and the Search Nearby feature. The name of the first hotel (default is rank by prominence) for each city was stored. 
     - The heatmap with pop-up markers was created that can display information about the city, the most popular hotel, current maximum temperature, and current weather description. 
 
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Vacation_Search/Vacation_Search_Map.png)
@@ -135,4 +135,3 @@ The example destinations are in Mexico:
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Vacation_Itinerary/Maps/Example%20Route%20copy.png)
 
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Vacation_Itinerary/Maps/Map%20with%20Markers%20copy.png)
-
