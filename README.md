@@ -62,8 +62,9 @@ The scatter plot does not show any definitive pattern.
 
 **City Latitude vs. Maximum Temperature**
 
-![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Max%20Temp_North.png)
-![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Max%20Temp_South.png)
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_MaxTemp_North.png)
+
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_MaxTemp_South.png)
 
 Now, we can see that, indeed, the regression confirms a strong negative association between the city latitude and maximum temperature in the Northen Hemishpere. In the Southern Hemispher, the relationship is weaker and positive. 
 
@@ -72,22 +73,26 @@ So, the latitude might be used to predict the maximum temperature. However, it i
 
 **City Latitude vs. % of Humidity**
 
-![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Humidity_North.png)
-![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Humidity_South.png)
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_Humidity_North.png)
+
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_Humidity_South.png)
 
 There is a weak association between the city latitude and humidity in each hemisphere. So, the humidity might not be well-predictable by the change in the latitude. 
 
 **City Latitude vs. Cloudiness**
 
-![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Cloudiness_North.png)
-![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Cloudiness_South.png)
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_Cloudiness_North.png)
+
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_Cloudiness_South.png)
 
 The correlation between the city latitude and cloudiness is very low and slightly positive. So, the cloudiness might not be well-predictable by the change in the latitude. 
 
 **City Latitude vs. Wind Speed**
 
-![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Wind%20Speed_North.png)
-![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Latitude%20vs.%20Wind%20Speed_South.png)
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_WindSpeed_North.png)
+
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_WindSpeed_South.png)
+
 
 There association between the latitude and wind speed is almost non-existant with a close to zero slope. So, the wind cannot be predictable by changes in latitude. 
 
