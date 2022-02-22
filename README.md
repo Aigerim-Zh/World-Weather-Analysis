@@ -62,7 +62,7 @@ The scatter plot does not show any definitive pattern.
 
 **City Latitude vs. Maximum Temperature**
 
-![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_MaxTemp_North.png=250x250)
+![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_MaxTemp_North.png=100x100)
 
 ![](https://github.com/Aigerim-Zh/World-Weather-Analysis/blob/main/Weather_Database/Analysis/Lin_Regression_MaxTemp_South.png)
 
